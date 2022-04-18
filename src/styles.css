@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Red+Hat+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Red+Hat+Text:wght@700&display=swap');
+
+.card {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 0.2fr 1fr 0.86fr;
+    padding: 25px;
+    font-size: 15px;
+    font-family: "League Spartan", sans-serif;
+}
+
+.company, .new, .featured, .position, .postedAt, .contract, .location {
+    display: inline;
+    margin-right: 20px;
+}
+
+.wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.company {
+    color: hsl(180, 29%, 50%);
+}
+
+.new {
+    background-color: hsl(180, 29%, 50%);
+    color: hsl(180, 52%, 96%);
+    padding: 3px 8px 3px 8px;
+    border-radius: 15px;
+}
+
+.featured {
+    background-color: black;
+    color: hsl(180, 31%, 95%);
+    border-radius: 15px;
+    padding: 3px 8px 3px 8px;
+}
+
+.position {
+    font-weight: 700;
+}
+
+.position:hover {
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+
+.postedAt, .contract, .location {
+    color: hsl(180, 8%, 52%);
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.tags, .logo {
+    display: flex;
+    align-items: center;
+}
+
+.tags ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.tags ul li {
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+}
+
+.tags ul li:hover {
+    color: hsl(180, 31%, 95%);
+    background-color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+
+
+
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Desaturated Dark Cyan: hsl(180, 29%, 50%)
+
+### Neutral
+
+- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+- Dark Grayish Cyan: v
+- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Headings
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 500, 700
+*/
