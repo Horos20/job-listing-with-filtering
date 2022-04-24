@@ -12,7 +12,7 @@ function App() {
   }
 
   function RemoveCategory(item) {
-    console.log(item)
+    setCategory(category.filter(c => c !== item))
   }
 
   const [category, setCategory] = useState([]);
