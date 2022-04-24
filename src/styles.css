@@ -60,6 +60,10 @@
     align-items: center;
 }
 
+.tags {
+    justify-content: end;
+}
+
 .tags ul {
     display: flex;
     list-style: none;
@@ -80,7 +84,28 @@
     cursor: pointer;
 }
 
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
+#filterbar {
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+#filterbar ul {
+    flex-wrap: wrap;
+}
+
+#filterbar ul li {
+    margin: 5px;
+}
 
 /*
 # Front-end Style Guide

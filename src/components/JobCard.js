@@ -1,15 +1,16 @@
 import React from 'react'
-import './styles.css'
-import data from "./data.json";
+import '../styles.css'
+import data from "../data.json";
 
-export default function jobcard() {
+
+export default function JobCard({ AddCategory }) {
   return (
       <>
-        {data.map((data, key) => {
+        {data.map((data) => {
             return (
-            <div key={key} className='card'>
+            <div key={data.id} className='card'>
                     <div className='logo'>
-                        <img src={require(`${data.logo}`)} alt='logo'></img>
+                        <img src={require(`/src/${data.logo}`)} alt='logo'></img>
                     </div>
                     <div className='info'>
                         <p className='company'>{data.company}</p>
@@ -24,16 +25,16 @@ export default function jobcard() {
                     </div>
                     <div className='tags'>
                         <ul>
-                            <li>{data.role}</li>
-                            <li>{data.level}</li>
+                            <li><button onClick={() => AddCategory(`${data.role}`)}>{data.role}</button></li>
+                            <li><button onClick={() => AddCategory(`${data.level}`)}>{data.level}</button></li>
                             {data.languages.map((languages, key) => {
                                 return(
-                                    <li key={key}>{languages}</li>
+                                    <li key={key}><button onClick={() => AddCategory(`${languages}`)}>{languages}</button></li>
                                 )
                             })}
                             {data.tools.map((tools, key) => {
                                 return(
-                                    <li key={key}>{tools}</li>
+                                    <li key={key}><button onClick={() => AddCategory(`${tools}`)}>{tools}</button></li>
                                 )
                             })}
                         </ul>
