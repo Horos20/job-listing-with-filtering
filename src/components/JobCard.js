@@ -3,10 +3,31 @@ import '../styles.css'
 import data from "../data.json";
 
 
-export default function JobCard({ AddCategory }) {
+export default function JobCard({ category, AddCategory }) {
+    function filteredData() {
+        if (category.length === 0) {
+            return data
+        } else {
+            let filteredData = []
+            data.map(data => {
+                let categories = [data.role, data.level]
+                data.languages.map(language => (
+                    categories.push(language)
+                ))
+                data.tools.map(tool => (
+                    categories.push(tool)
+                ))
+                if (category.every(v => categories.includes(v))) {
+                    filteredData.push(data)
+                }
+                return (null);
+            })
+            return filteredData;
+        }
+    }
   return (
       <>
-        {data.map((data) => {
+        {filteredData().map((data) => {
             return (
             <div key={data.id} className='card'>
                     <div className='logo'>

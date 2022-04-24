@@ -8,7 +8,6 @@ function App() {
     if (category.indexOf(item) < 0) {
         setCategory(category => [...category, item]);
     }
-    console.log(category)
   }
 
   function RemoveCategory(item) {
@@ -21,7 +20,7 @@ function App() {
     <>
       <div className="page_container">
         <FilterBar category={category} RemoveCategory={RemoveCategory}/>
-        <JobCard AddCategory={AddCategory}/>
+        <JobCard category={category} AddCategory={AddCategory}/>
       </div>
     </>
   )
