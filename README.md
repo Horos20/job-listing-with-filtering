@@ -24,14 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](.src/images/screenshot.jpg)
+![](./src/images/screenshot.jpg)
 
 ### Links
 
 - Solution URL: [https://github.com/Horos20/job-listing-with-filtering](https://github.com/Horos20/job-listing-with-filtering)
-- Live Site URL: [https://horos20.github.io/
-job-listing-with-filtering/](https://horos20.github.io/
-job-listing-with-filtering/)
+- Live Site URL: [https://horos20.github.io/job-listing-with-filtering/](https://horos20.github.io/job-listing-with-filtering/)
 
 ### Built with
 
