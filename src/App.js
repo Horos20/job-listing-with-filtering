@@ -14,13 +14,17 @@ function App() {
     setCategory(category.filter(c => c !== item))
   }
 
+  function RemoveAllCategories() {
+    setCategory(category.filter(c => c === true))
+  }
+
   const [category, setCategory] = useState([]);
 
   return(
     <>
       <div className="page-container">
         <div className="container">
-          <FilterBar category={category} RemoveCategory={RemoveCategory}/>
+          <FilterBar category={category} RemoveCategory={RemoveCategory} RemoveAllCategories={RemoveAllCategories}/>
           <JobCard category={category} AddCategory={AddCategory}/>
         </div>
       </div>
