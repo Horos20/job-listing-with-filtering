@@ -18,9 +18,11 @@ function App() {
 
   return(
     <>
-      <div className="page_container">
-        <FilterBar category={category} RemoveCategory={RemoveCategory}/>
-        <JobCard category={category} AddCategory={AddCategory}/>
+      <div className="page-container">
+        <div className="container">
+          <FilterBar category={category} RemoveCategory={RemoveCategory}/>
+          <JobCard category={category} AddCategory={AddCategory}/>
+        </div>
       </div>
     </>
   )

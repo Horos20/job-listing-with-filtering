@@ -4,11 +4,11 @@ import img from "../images/icon-remove.svg"
 export default function FilterBar( {category, RemoveCategory} ) {
   return (
     <>
-        <div className='tags' id='filterbar'>
+        <div id='filterbar'>
             <ul>
             {category.map((item) => {
                 return (
-                <li key={item}>{item}<button onClick={() => RemoveCategory(`${item}`)}><img src={img} alt='remove-icon'/></button></li>
+                <li key={item}>{item}<div><button onClick={() => RemoveCategory(`${item}`)}><img src={img} alt='remove-icon'/></button></div></li>
                 );
             })}
             </ul>

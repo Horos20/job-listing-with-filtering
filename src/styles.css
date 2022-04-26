@@ -1,13 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Red+Hat+Text:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Red+Hat+Text:wght@700&display=swap');
 
+
+.page-container {
+    width: 100vw;
+    background: url("./images/bg-header-mobile.svg") top no-repeat,  hsl(180, 52%, 96%) bottom;
+    background-size: 100vw auto, cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95vw;
+    margin-top: 10vh;
+}
+
 .card {
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 0.2fr 1fr 0.86fr;
+    display: flex;
+    flex-direction: column;
     padding: 25px;
     font-size: 15px;
     font-family: "League Spartan", sans-serif;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.logo, .info, .tags {
+    margin-bottom: 15px;
 }
 
 .company, .new, .featured, .position, .postedAt, .contract, .location {
@@ -60,18 +83,16 @@
     align-items: center;
 }
 
-.tags {
-    justify-content: end;
-}
-
-.tags ul {
+.tags ul, #filterbar ul {
     display: flex;
     list-style: none;
     padding: 0;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.tags ul li {
-    margin-right: 10px;
+.tags ul li, #filterbar ul li {
+    margin:  0 10px 10px 0;
     padding: 8px;
     border-radius: 5px;
     background-color: hsl(180, 31%, 95%);
@@ -82,6 +103,18 @@
     color: hsl(180, 31%, 95%);
     background-color: hsl(180, 29%, 50%);
     cursor: pointer;
+}
+
+.tags ul li div {
+    margin: -8px -8px -8px -8px;
+    height: 40px;
+    width: 70px;
+}
+
+.tags ul li div button {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 button {
@@ -95,16 +128,72 @@ button {
 }
 
 #filterbar {
-    justify-content: flex-start;
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
 }
 
 #filterbar ul {
     flex-wrap: wrap;
+    margin-left: 30px;
 }
 
 #filterbar ul li {
+    padding: 8px;
     margin: 5px;
+    display: inline-block;
+}
+
+#filterbar ul li div {
+    display: inline-block;
+    margin: -8px -8px -8px 5px;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 0 5px 5px 0;
+}
+
+#filterbar ul li div button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#filterbar ul li div button:hover {
+    background-color: black;
+    border-radius: 0 5px 5px 0;
+}
+
+#filterbar ul li div button img  {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 15px;
+    height: 15px;
+}
+
+@media (min-width: 375px) { 
+	.page-container {
+        background: url("./images/bg-header-desktop.svg") top repeat-x,  hsl(180, 52%, 96%) bottom;
+        background-size: auto 15vh, cover;
+    }
+    .container {
+        width: 75vw;
+    }
+}
+
+@media (min-width: 875px) {
+    .card {
+        flex-direction: row;
+    }
+    .logo, .info, .tags {
+        margin-bottom: 0;
+    }
+    .tags {
+        margin-left: auto;
+    }
 }
 
 /*

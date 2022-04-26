@@ -46,16 +46,16 @@ export default function JobCard({ category, AddCategory }) {
                     </div>
                     <div className='tags'>
                         <ul>
-                            <li><button onClick={() => AddCategory(`${data.role}`)}>{data.role}</button></li>
-                            <li><button onClick={() => AddCategory(`${data.level}`)}>{data.level}</button></li>
+                            <li><div><button onClick={() => AddCategory(`${data.role}`)}>{data.role}</button></div></li>
+                            <li><div><button onClick={() => AddCategory(`${data.level}`)}>{data.level}</button></div></li>
                             {data.languages.map((languages, key) => {
                                 return(
-                                    <li key={key}><button onClick={() => AddCategory(`${languages}`)}>{languages}</button></li>
+                                    <li key={key}><div><button onClick={() => AddCategory(`${languages}`)}>{languages}</button></div></li>
                                 )
                             })}
                             {data.tools.map((tools, key) => {
                                 return(
-                                    <li key={key}><button onClick={() => AddCategory(`${tools}`)}>{tools}</button></li>
+                                    <li key={key}><div><button onClick={() => AddCategory(`${tools}`)}>{tools}</button></div></li>
                                 )
                             })}
                         </ul>
